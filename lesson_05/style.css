@@ -1,0 +1,31 @@
+body{
+    background-color: gray;
+}
+
+.rock{
+
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.paper{
+    margin: 20px;
+}
+
+.scissor{
+    margin: 20px;
+}
+
+button {
+    border-radius: 50%;
+    padding: 50px;
+    border: none;
+    background-color: darkgray
+}
+
+button:hover{
+    background-color: gray;
+    font-size: 5em;
+    cursor: pointer;
+}
+
