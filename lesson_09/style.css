@@ -1,0 +1,38 @@
+body {
+  background-image: url(rough-horn-2146181_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: 1800px 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+}
+
+.todo-grid,
+.todo-input {
+  display: grid;
+  grid-template-columns: 200px 170px 120px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  background-color: green;
+  cursor: pointer;
+}
+
+.delete_btn {
+  border: none;
+  background-color: rgb(255, 35, 35);
+  cursor: pointer;
+}
+
+p {
+  font-style: oblique;
+}
