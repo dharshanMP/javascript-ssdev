@@ -1,5 +1,22 @@
 let computer_move = '';
 let result = '';
+let score = {
+    win : 0,
+    losses : 0,
+    ties : 0 
+};
+
+
+function scoring(){
+    if(result === 'win🥳'){
+        score.win += 1;
+    } else if(result === 'lose'){
+        score.losses += 1;
+    }else if (result === 'tie'){
+        score.ties += 1;
+    }
+}
+
 
 function main_game() {
     const random_num = Math.random();
@@ -10,7 +27,10 @@ function main_game() {
     } else {
         computer_move = 'Scissor';
     }
+  
 }
+
+
 
 function rock() {
     main_game(); 
@@ -21,7 +41,8 @@ function rock() {
     } else {
         result = 'tie';
     }
-    alert(`You picked rock. Computer picked ${computer_move}\n${result}`);
+    scoring();
+    alert(`You picked rock. Computer picked ${computer_move}\n${result}\nWin : ${score.win}, Losses : ${score.losses},Ties : ${score.ties} `);
 }
 
 function paper() {
@@ -33,7 +54,8 @@ function paper() {
     } else {
         result = 'tie';
     }
-    alert(`You picked paper. Computer picked ${computer_move}\n${result}`);
+    scoring();
+    alert(`You picked paper. Computer picked ${computer_move}\n${result}\nWin : ${score.win}, Losses : ${score.losses},Ties : ${score.ties}`);
 }
 
 function scissor() {
@@ -45,5 +67,6 @@ function scissor() {
     } else {
         result = 'tie';
     }
-    alert(`You picked scissor. Computer picked ${computer_move}\n${result}`);
+    scoring();
+    alert(`You picked scissor. Computer picked ${computer_move}\n${result}\nWin : ${score.win}, Losses : ${score.losses},Ties : ${score.ties}`);
 }
